@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/gains-api.iml" filepath="$PROJECT_DIR$/gains-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/SwolGains.iml" filepath="$PROJECT_DIR$/.idea/SwolGains.iml" />
     </modules>
   </component>
 </project>
