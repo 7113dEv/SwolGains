@@ -1,6 +1,6 @@
 import React from 'react'
 import GoogleLogin from 'react-google-login';
-import constants from '../../../constants';
+import constants from '../../../utilities/constants';
 import Header from '../../header/Header'
 
 const HomePage = () => {

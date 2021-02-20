@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import ProtectedRoute from '../ProtectedRoute';
-import Login from '../Login';
+import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
+import Login from '../Login/Login';
 import HomePage from '../pages/homepage/HomePage';
 import constants from '../../utilities/constants';
 
@@ -14,15 +14,6 @@ function App() {
   return (
     <Router>
       <div className="site-main-block">
-        <Route
-          path="/"
-          render={(props) =>
-            props.location.pathname !== constants.LOGIN_PATH && (
-              <p></p>
-              // <Header className="App-header" setLoggedOut={setLoggedOut} />
-            )
-          }
-        />
         <Switch>
           <Route
             exact

@@ -17,10 +17,6 @@ function ProtectedRoute({ component: Component, isLoggedIn, ...rest }) {
         if (!isLoggedIn) {
           return <Redirect to={{ pathname: constants.SIGN_IN_PATH }} />;
         }
-        // redirect to sign-in page if user is unauthorized
-        if (!roles.includes(role)) {
-          return <Redirect to={{ pathname: constants.SIGN_IN_PATH }} />;
-        }
         return <Component {...rest} {...props} />;
       }}
     />
