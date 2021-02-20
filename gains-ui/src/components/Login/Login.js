@@ -9,6 +9,7 @@ export const Login = ({ setIsLoggedIn, loggedOut, setLoggedOut }) => {
   const history = useHistory();
 
   const responseGoogle = (response) => {
+    setLoggedOut(false);
     if (!response.error) {
       const account = response.profileObj;
       const { name, email, googleId } = account;
