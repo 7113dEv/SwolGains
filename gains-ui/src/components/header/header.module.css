@@ -1,12 +1,18 @@
 .header {
   display: fixed;
   background-color: #2D3142;
-  height: 2rem;
+  height: fit-content;
   width: auto;
+  padding: 0.5rem;
   margin: 0;
 }
 
 .navbutton {
   color: white;
-  padding: 0 0.5rem;
+  margin: 0 2rem;
+  transition: border 0.2s;
+}
+
+.navbutton:hover {
+  border-bottom: 2px white solid;
 }
