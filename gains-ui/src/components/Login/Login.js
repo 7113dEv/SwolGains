@@ -9,15 +9,17 @@ export const Login = ({ setIsLoggedIn, loggedOut, setLoggedOut }) => {
   const history = useHistory();
 
   const responseGoogle = (response) => {
-    const account = response.profileObj;
-    const { name, email, googleId } = account;
-    sessionStorage.setItem('auth', response.tokenId);
-    sessionStorage.setItem('email', email);
-    sessionStorage.setItem('name', name);
-    sessionStorage.setItem('id', googleId);
-    setIsLoggedIn(true);
-    setLoggedOut(false);
-    history.push(constants.HOME_PATH);
+    if (!response.error) {
+      const account = response.profileObj;
+      const { name, email, googleId } = account;
+      sessionStorage.setItem('auth', response.tokenId);
+      sessionStorage.setItem('email', email);
+      sessionStorage.setItem('name', name);
+      sessionStorage.setItem('id', googleId);
+      setIsLoggedIn(true);
+      history.push(constants.HOME_PATH);
+    }
+    return;
   }
 
   return (
