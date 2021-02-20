@@ -14,12 +14,13 @@ const Header = ({ setLoggedOut }) => {
 
   return (
     <div className={styles.header}>
-        <NavLink to="/general-muscle-gain" className={styles.navbutton}>General Muscle Gain</NavLink>
-        <NavLink to="/flexibility" className={styles.navbutton}>Flexibility</NavLink>
-        <NavLink to="/aerobic-stamina" className={styles.navbutton}>Aerobic Stamina</NavLink>
-        <NavLink to="/higher-energy" className={styles.navbutton}>Higher Energy</NavLink>
-        <NavLink to="/targeted-muscle-groups" className={styles.navbutton}>Targeted Muscle Groups</NavLink>
-      <div className={styles.logout}> 
+      <NavLink to="/home" ><img className={styles.logo} src={process.env.PUBLIC_URL + "SwolGainsMini.png"} /></NavLink>
+      <NavLink to="/general-muscle-gain" className={styles.navbutton}>General Muscle Gain</NavLink>
+      <NavLink to="/flexibility" className={styles.navbutton}>Flexibility</NavLink>
+      <NavLink to="/aerobic-stamina" className={styles.navbutton}>Aerobic Stamina</NavLink>
+      <NavLink to="/higher-energy" className={styles.navbutton}>Higher Energy</NavLink>
+      <NavLink to="/targeted-muscle-groups" className={styles.navbutton}>Targeted Muscle Groups</NavLink>
+      <div className={styles.logout}>
         <button onClick={handleLogout}>Logout</button>
       </div>
     </div>
