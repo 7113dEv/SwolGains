@@ -1,8 +1,17 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useHistory } from 'react-router-dom'
+import constants from '../../utilities/constants';
 import styles from './header.module.css'
 
-const Header = () => {
+const Header = ({ setLoggedOut }) => {
+  const history = useHistory();
+
+  const handleLogout = () => {
+    setLoggedOut(true);
+    sessionStorage.clear()
+    history.push(constants.LOGIN_PATH);
+  }
+
   return (
     <div className={styles.header}>
         <NavLink to="/general-muscle-gain" className={styles.navbutton}>General Muscle Gain</NavLink>
@@ -11,7 +20,7 @@ const Header = () => {
         <NavLink to="/higher-energy" className={styles.navbutton}>Higher Energy</NavLink>
         <NavLink to="/targeted-muscle-groups" className={styles.navbutton}>Targeted Muscle Groups</NavLink>
       <div className={styles.logout}> 
-        <button>Logout</button>
+        <button onClick={handleLogout}>Logout</button>
       </div>
     </div>
   );
