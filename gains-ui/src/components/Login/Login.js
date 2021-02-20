@@ -6,6 +6,7 @@ import video from '../../utilities/video/workout-video.mp4'
 import styles from './Login.module.css';
 
 export const Login = ({ setIsLoggedIn, loggedOut, setLoggedOut }) => {
+  document.querySelector('video').playbackRate = 0.9;
   const history = useHistory();
 
   const responseGoogle = (response) => {
