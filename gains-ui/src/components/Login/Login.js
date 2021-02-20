@@ -3,6 +3,7 @@ import { useHistory } from 'react-router-dom';
 import GoogleLogin from 'react-google-login';
 import constants from '../../utilities/constants';
 import video from '../../utilities/video/workout-video.mp4'
+import styles from './Login.module.css';
 
 export const Login = ({ setIsLoggedIn, loggedOut, setLoggedOut }) => {
   const history = useHistory();
@@ -20,16 +21,14 @@ export const Login = ({ setIsLoggedIn, loggedOut, setLoggedOut }) => {
   }
 
   return (
-    <div>
-      <video autoPlay loop muted id='video'>
-        <source 
-          src={video}
-          type='video/mp4'
-        />
-      </video>
+    <>
+    <div className={styles.overlay}>
       <h1>
-        Login Page
+        Swol Gains
       </h1>
+      <h3>
+        Workout Generator
+      </h3>
       {loggedOut 
       ? <h2>Peace out Mother Fucker</h2>
       : <h2>Welcome!</h2> 
@@ -42,6 +41,15 @@ export const Login = ({ setIsLoggedIn, loggedOut, setLoggedOut }) => {
         cookiePolicy={'single_host_origin'}
       />
     </div>
+    <div className={styles.videoDiv}>
+      <video autoPlay loop muted className={styles.video}>
+        <source 
+          src={video}
+          type='video/mp4'
+        />
+      </video>
+    </div>
+    </>
   )
 }
 
