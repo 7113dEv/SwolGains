@@ -1,0 +1,12 @@
+.header {
+  display: fixed;
+  background-color: #2D3142;
+  height: 2rem;
+  width: auto;
+  margin: 0;
+}
+
+.navbutton {
+  color: white;
+  padding: 0 0.5rem;
+}
