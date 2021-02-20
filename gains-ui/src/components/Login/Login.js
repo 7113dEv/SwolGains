@@ -2,22 +2,33 @@ import React from 'react'
 import { useHistory } from 'react-router-dom';
 import GoogleLogin from 'react-google-login';
 import constants from '../../utilities/constants';
-import video from '../../utilities/video/workout-video.mp4'
+import video from '../../utilities/videos/female-workout/workout-video.mp4'
 import styles from './Login.module.css';
 
 export const Login = ({ setIsLoggedIn, loggedOut, setLoggedOut }) => {
   const history = useHistory();
 
+  if (document.getElementById('video')) {
+    document.querySelector('video').playbackRate = 0.9;
+  }
+
   const responseGoogle = (response) => {
-    const account = response.profileObj;
-    const { name, email, googleId } = account;
-    sessionStorage.setItem('auth', response.tokenId);
-    sessionStorage.setItem('email', email);
-    sessionStorage.setItem('name', name);
-    sessionStorage.setItem('id', googleId);
-    setIsLoggedIn(true);
     setLoggedOut(false);
-    history.push(constants.HOME_PATH);
+    if (!response.error) {
+      const account = response.profileObj;
+      const { name, email, googleId } = account;
+      sessionStorage.setItem('auth', response.tokenId);
+      sessionStorage.setItem('email', email);
+      sessionStorage.setItem('name', name);
+      sessionStorage.setItem('id', googleId);
+      setIsLoggedIn(true);
+      history.push(constants.HOME_PATH);
+    }
+    return;
+  }
+
+  const handleVideoEnd = () => {
+    console.log(`Video has ended`);
   }
 
   return (
@@ -42,9 +53,9 @@ export const Login = ({ setIsLoggedIn, loggedOut, setLoggedOut }) => {
       />
     </div>
     <div className={styles.videoDiv}>
-      <video autoPlay loop muted className={styles.video}>
+      <video id='video'autoPlay loop muted className={styles.video} onEnded={handleVideoEnd}>
         <source 
-          src={video}
+          src={constants.videos.female_treadmill}
           type='video/mp4'
         />
       </video>
