@@ -6,6 +6,7 @@ import video from '../../utilities/videos/female-workout/workout-video.mp4'
 import styles from './Login.module.css';
 
 export const Login = ({ setIsLoggedIn, loggedOut, setLoggedOut }) => {
+  document.querySelector('video').playbackRate = 0.9;
   const history = useHistory();
 
   if (document.getElementById('video')) {

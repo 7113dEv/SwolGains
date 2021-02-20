@@ -6,6 +6,11 @@ import Login from '../Login/Login';
 import HomePage from '../pages/homepage/HomePage';
 import constants from '../../utilities/constants';
 import './App.css';
+import AerobicStamina from '../pages/tailors/AerobicStamina';
+import GeneralMuscleGain from '../pages/tailors/GeneralMuscleGain';
+import Flexibility from '../pages/tailors/Flexibility';
+import HigherEnergy from '../pages/tailors/HigherEnergy';
+import TargetedMuscleGroups from '../pages/tailors/TargetedMuscleGroups';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(sessionStorage.getItem("auth"));
@@ -39,6 +44,36 @@ function App() {
             path={constants.HOME_PATH}
             isLoggedIn={isLoggedIn}
             component={HomePage}
+          />
+          <ProtectedRoute
+            exact
+            path={constants.GENERAL_PATH}
+            isLoggedIn={isLoggedIn}
+            component={GeneralMuscleGain}
+          />
+          <ProtectedRoute
+            exact
+            path={constants.FLEXIBLE_PATH}
+            isLoggedIn={isLoggedIn}
+            component={Flexibility}
+          />
+          <ProtectedRoute
+            exact
+            path={constants.AEROBIC_PATH}
+            isLoggedIn={isLoggedIn}
+            component={AerobicStamina}
+          />
+          <ProtectedRoute
+            exact
+            path={constants.HIGHER_PATH}
+            isLoggedIn={isLoggedIn}
+            component={HigherEnergy}
+          />
+          <ProtectedRoute
+            exact
+            path={constants.TARGETED_PATH}
+            isLoggedIn={isLoggedIn}
+            component={TargetedMuscleGroups}
           />
         </Switch>
       </div>
