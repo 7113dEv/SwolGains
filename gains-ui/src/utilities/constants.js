@@ -1,5 +1,5 @@
 import vid1 from './videos/female-pt/female-personal-trainer.mp4';
-import vid2 from './videos/female-treadmill/female-on-treadmill';
+import vid2 from './videos/female-treadmill/female-on-treadmill.mp4';
 import vid3 from './videos/female-workout/workout-video.mp4';
 import vid4 from './videos/male-skipping-rope/man-skipping-rope.mp4';
 

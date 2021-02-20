@@ -1,12 +1,12 @@
 import React from 'react'
-import { useHistory } from 'react-router-dom';
+import { NavLink, useHistory } from 'react-router-dom';
 import GoogleLogin from 'react-google-login';
 import constants from '../../utilities/constants';
-import video from '../../utilities/videos/female-workout/workout-video.mp4'
 import styles from './Login.module.css';
+import { VideoShow } from '../VideoShow/VideoShow';
+import logoText from '../../utilities/images/logo-text.png'
 
 export const Login = ({ setIsLoggedIn, loggedOut, setLoggedOut }) => {
-  document.querySelector('video').playbackRate = 0.9;
   const history = useHistory();
 
   if (document.getElementById('video')) {
@@ -28,39 +28,38 @@ export const Login = ({ setIsLoggedIn, loggedOut, setLoggedOut }) => {
     return;
   }
 
-  const handleVideoEnd = () => {
-    console.log(`Video has ended`);
+  const handleGuestLogin = () => {
+    setLoggedOut(false);
+    sessionStorage.setItem('auth', 'guest');
+    sessionStorage.setItem('name', "Guest");
+    setIsLoggedIn(true);
   }
 
   return (
     <>
     <div className={styles.overlay}>
-      <h1>
-        Swol Gains
-      </h1>
-      <h3>
-        Workout Generator
-      </h3>
-      {loggedOut 
-      ? <h2>Peace out Mother Fucker</h2>
-      : <h2>Welcome!</h2> 
-      }
-      <GoogleLogin
-        clientId={constants.OAUTH_CLIENT_ID}
-        buttonText="Login"
-        onSuccess={responseGoogle}
-        onFailure={responseGoogle}
-        cookiePolicy={'single_host_origin'}
-      />
+      <div className={styles.content}>
+        <h1>
+          Swol Gains Workout Generator
+        </h1>
+        {loggedOut 
+        ? <h2>Peace out Mother Fucker</h2>
+        : <h2>Welcome!</h2> 
+        }
+        <div className={styles.loginBtnDiv}>
+          <GoogleLogin
+            className={styles.googleLoginBtn}
+            clientId={constants.OAUTH_CLIENT_ID}
+            buttonText="Login with Google"
+            onSuccess={responseGoogle}
+            onFailure={responseGoogle}
+            cookiePolicy={'single_host_origin'}
+          />
+          <NavLink to={constants.HOME_PATH} className={styles.guestLogin} onClick={handleGuestLogin}>Continue, as a guest</NavLink>
+        </div>
+      </div>
     </div>
-    <div className={styles.videoDiv}>
-      <video id='video'autoPlay loop muted className={styles.video} onEnded={handleVideoEnd}>
-        <source 
-          src={constants.videos.female_treadmill}
-          type='video/mp4'
-        />
-      </video>
-    </div>
+    <VideoShow video={constants.videos.male_jumprope} />
     </>
   )
 }

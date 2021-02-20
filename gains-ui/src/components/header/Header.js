@@ -14,7 +14,7 @@ const Header = ({ setLoggedOut }) => {
 
   return (
     <div className={styles.header}>
-      <NavLink to="/home" ><img className={styles.logo} src={process.env.PUBLIC_URL + "SwolGainsMini.png"} /></NavLink>
+      <NavLink to="/home" ><img className={styles.logo} src={process.env.PUBLIC_URL + "SwolGainsMini.png"} alt="Swol Gains" /></NavLink>
       <NavLink to="/general-muscle-gain" className={styles.navbutton}>General Muscle Gain</NavLink>
       <NavLink to="/flexibility" className={styles.navbutton}>Flexibility</NavLink>
       <NavLink to="/aerobic-stamina" className={styles.navbutton}>Aerobic Stamina</NavLink>
