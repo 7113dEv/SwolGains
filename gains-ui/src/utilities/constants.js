@@ -3,7 +3,12 @@ const constants = {
   GOOGLE_CALENDAR_CLIENT_ID: '389628340169-lgoq9a5am1k1e780cl38kd6h80n9kom5.apps.googleusercontent.com',
   // ----------------------------------- URL PATHS ----------------------------------- \\
   LOGIN_PATH: '/',
-  HOME_PATH: '/home'
+  HOME_PATH: '/home',
+  GENERAL_PATH: '/general-muscle-gain',
+  FLEXIBLE_PATH: '/flexibility',
+  AEROBIC_PATH: '/aerobic-stamina',
+  HIGHER_PATH: '/higher-energy',
+  TARGETED_PATH: '/targeted-muscle-groups'
 };
 
 export default constants;
