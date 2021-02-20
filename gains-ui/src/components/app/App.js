@@ -6,6 +6,7 @@ import HomePage from '../pages/homepage/HomePage';
 import constants from '../../utilities/constants';
 
 import './App.css';
+import Header from '../header/Header';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem('auth'));
@@ -13,6 +14,7 @@ function App() {
 
   return (
     <Router>
+      <Header />
       <div className="site-main-block">
         <Switch>
           <Route

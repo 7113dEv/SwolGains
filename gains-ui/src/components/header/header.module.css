@@ -8,6 +8,7 @@
 }
 
 .navbutton {
+  text-decoration: none;
   color: white;
   margin: 0 2rem;
   transition: border 0.2s;
