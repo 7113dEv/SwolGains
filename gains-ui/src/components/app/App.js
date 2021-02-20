@@ -4,7 +4,7 @@ import constants from '../../constants';
 
 import './App.css';
 
-function App() {  
+function App() {
 
   const responseGoogle = (response) => {
     console.log(response);
