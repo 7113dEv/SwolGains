@@ -1,7 +1,6 @@
 import React from 'react'
 import GoogleLogin from 'react-google-login';
 import constants from '../../../utilities/constants';
-import Header from '../../header/Header'
 
 const HomePage = () => {
   const responseGoogle = (response) => {
@@ -10,7 +9,6 @@ const HomePage = () => {
 
   return (
     <div>
-      <Header />
       <h1 >Swol Gains</h1>
       <GoogleLogin
         clientId={constants.OAUTH_CLIENT_ID}

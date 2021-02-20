@@ -25,7 +25,7 @@ function ProtectedRoute({ component: Component, isLoggedIn, ...rest }) {
 
 ProtectedRoute.propTypes = {
   component: PropTypes.elementType.isRequired,
-  isLoggedIn: PropTypes.string.isRequired,
+  isLoggedIn: PropTypes.bool.isRequired,
 };
 
 export default ProtectedRoute;
