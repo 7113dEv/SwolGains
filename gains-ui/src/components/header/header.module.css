@@ -1,16 +1,31 @@
 .header {
-  display: fixed;
+  justify-content: space-around;
+  display: flex;
   background-color: #2D3142;
-  height: fit-content;
+  height: 2.5rem;
   width: auto;
   padding: 0.5rem;
   margin: 0;
 }
 
+.logout {
+  background-color: #2d3142;
+  float: right;
+}
+
+.logout button {
+  background-color: #EAE8FF;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  width: 5rem;
+  height: 2em;
+}
+
 .navbutton {
   text-decoration: none;
   color: white;
-  margin: 0 2rem;
+  margin: 0 2rem ;
   transition: border 0.2s;
 }
 
