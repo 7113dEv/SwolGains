@@ -46,8 +46,3 @@
 .navbutton:hover {
   border-bottom: 2px white solid;
 }
-
-.navlinks {
-  justify-content: space-around;
-  display: flex;
-}
