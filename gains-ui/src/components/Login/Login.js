@@ -2,6 +2,7 @@ import React from 'react'
 import { useHistory } from 'react-router-dom';
 import GoogleLogin from 'react-google-login';
 import constants from '../../utilities/constants';
+import video from '../../utilities/video/workout-video.mp4'
 
 export const Login = ({ setIsLoggedIn, loggedOut, setLoggedOut }) => {
   const history = useHistory();
@@ -20,6 +21,12 @@ export const Login = ({ setIsLoggedIn, loggedOut, setLoggedOut }) => {
 
   return (
     <div>
+      <video autoPlay loop muted id='video'>
+        <source 
+          src={video}
+          type='video/mp4'
+        />
+      </video>
       <h1>
         Login Page
       </h1>
