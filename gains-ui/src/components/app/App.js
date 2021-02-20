@@ -5,19 +5,16 @@ import Header from '../header/Header';
 import Login from '../Login/Login';
 import HomePage from '../pages/homepage/HomePage';
 import constants from '../../utilities/constants';
-
 import './App.css';
-import Header from '../header/Header';
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(sessionStorage.getItem("auth"));
   const [loggedOut, setLoggedOut] = useState(false);
 
   return (
     <Router>
-      <Header />
       <div className="site-main-block">
-      <Route
+        <Route
           path={constants.LOGIN_PATH}
           render={(props) =>
             props.location.pathname !== constants.LOGIN_PATH && (
