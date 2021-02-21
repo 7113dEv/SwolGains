@@ -24,17 +24,25 @@ const constants = {
   },
   // ----------------------------------- Workouts ----------------------------------- \\
   workouts: {
-    chest:['Bench Press', 'Dips', 'Incline Bench Press', 'Close-Grip Bench Press', 'Push Ups'],
-    shoulder:['Military Press', 'Side Lateral Raises', 'Front Raise', 'Arnold Press', 'Rear-Delt Fly'],
-    tricep:['Tricep Extensions', 'Overhead Extensions', 'Skull Crushers', 'Tricep Kick-Backs', 'Diamond Push Ups'],
-    back:['Pull Ups', 'Bent Over Row', 'Upright Row', 'Shrugs', 'Lower Back Hyper Extension'],
-    bicep:['Barbell Curls', 'Hammer Curls', 'Preacher Curls', 'Dumbell Curls', 'Drag Curls'],
-    leg:['Squats', 'Lunges', 'Reverse Lunges', 'Deadlifts', 'Hamstring Curls'],
-    core:['Lumber Jacks', 'Lemon Squeezes', 'Double Crunches', 'Planks', 'Hanging Knee Raises']
+    chest: ['Bench Press', 'Dips', 'Incline Bench Press', 'Close-Grip Bench Press', 'Push Ups'],
+    shoulder: ['Military Press', 'Side Lateral Raises', 'Front Raise', 'Arnold Press', 'Rear-Delt Fly'],
+    tricep: ['Tricep Extensions', 'Overhead Extensions', 'Skull Crushers', 'Tricep Kick-Backs', 'Diamond Push Ups'],
+    back: ['Pull Ups', 'Bent Over Row', 'Upright Row', 'Shrugs', 'Lower Back Hyper Extension'],
+    bicep: ['Barbell Curls', 'Hammer Curls', 'Preacher Curls', 'Dumbell Curls', 'Drag Curls'],
+    leg: ['Squats', 'Lunges', 'Reverse Lunges', 'Deadlifts', 'Hamstring Curls'],
+    core: ['Lumber Jacks', 'Lemon Squeezes', 'Double Crunches', 'Planks', 'Hanging Knee Raises', 'Russian Twists', 'Weighted Twists', 'Crunches', 'Situps', 'Weighted Crunches']
   },
   push: ['chest', 'tricep', 'shoulder'],
   pull: ['back', 'bicep'],
+  push_pull: ['chest', 'tricep', 'shoulder', 'back', 'bicep'],
   core_balance: ['core'],
+  leg: ['leg'],
+  chest_tri: ['chest', 'tricep'],
+  back_bi: ['back', 'bicep'],
+  shoulders_arms: ['shoulder', 'tricep', 'bicep'],
+  three_day: ['push_pull', 'core_balance', 'leg'],
+  five_day: ['push', 'leg', 'pull', 'core_balance', 'leg'],
+  seven_day: ['chest_tri', 'leg', 'back_bi', 'core_balance', 'leg', 'shoulders_arms'],
 };
 
 export default constants;
