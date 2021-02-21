@@ -10,7 +10,7 @@ import AerobicStamina from '../pages/tailors/AerobicStamina';
 import GeneralMuscleGain from '../pages/tailors/GeneralMuscleGain';
 import Flexibility from '../pages/tailors/Flexibility';
 import HigherEnergy from '../pages/tailors/HigherEnergy';
-import TargetedMuscleGroups from '../pages/tailors/TargetedMuscleGroups';
+import WorkoutGeneratorPage from '../pages/tailors/WorkoutGeneratorPage';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(sessionStorage.getItem("auth"));
@@ -71,9 +71,9 @@ function App() {
           />
           <ProtectedRoute
             exact
-            path={constants.TARGETED_PATH}
+            path={constants.GENERATE_PATH}
             isLoggedIn={isLoggedIn}
-            component={TargetedMuscleGroups}
+            component={WorkoutGeneratorPage}
           />
         </Switch>
       </div>

@@ -1,0 +1,9 @@
+.showContent {
+  background-color: wheat;
+  width: 80%;
+  height: 5rem;
+}
+
+.hideContent {
+  display: none;
+}
