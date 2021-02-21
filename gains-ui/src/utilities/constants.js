@@ -9,11 +9,12 @@ const constants = {
   // ----------------------------------- URL PATHS ----------------------------------- \\
   LOGIN_PATH: '/',
   HOME_PATH: '/home',
+  EDUCATIONAL_PATH: '/educational',
   GENERAL_PATH: '/general-muscle-gain',
   FLEXIBLE_PATH: '/flexibility',
   AEROBIC_PATH: '/aerobic-stamina',
   HIGHER_PATH: '/higher-energy',
-  TARGETED_PATH: '/targeted-muscle-groups',
+  GENERATE_PATH: '/generate',
   // ----------------------------------- VIDEOS ----------------------------------- \\
   videos: {
     female_pt: vid1,
@@ -21,6 +22,19 @@ const constants = {
     female_workout: vid3,
     male_jumprope: vid4
   },
+  // ----------------------------------- Workouts ----------------------------------- \\
+  workouts: {
+    chest:['Bench Press', 'Dips', 'Incline Bench Press', 'Close-Grip Bench Press', 'Push Ups'],
+    shoulder:['Military Press', 'Side Lateral Raises', 'Front Raise', 'Arnold Press', 'Rear-Delt Fly'],
+    tricep:['Tricep Extensions', 'Overhead Extensions', 'Skull Crushers', 'Tricep Kick-Backs', 'Diamond Push Ups'],
+    back:['Pull Ups', 'Bent Over Row', 'Upright Row', 'Shrugs', 'Lower Back Hyper Extension'],
+    bicep:['Barbell Curls', 'Hammer Curls', 'Preacher Curls', 'Dumbell Curls', 'Drag Curls'],
+    leg:['Squats', 'Lunges', 'Reverse Lunges', 'Deadlifts', 'Hamstring Curls'],
+    core:['Lumber Jacks', 'Lemon Squeezes', 'Double Crunches', 'Planks', 'Hanging Knee Raises']
+  },
+  push: ['chest', 'tricep', 'shoulder'],
+  pull: ['back', 'bicep'],
+  core_balance: ['core'],
 };
 
 export default constants;
