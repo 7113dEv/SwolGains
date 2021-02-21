@@ -41,7 +41,7 @@ export const Login = ({ setIsLoggedIn, loggedOut, setLoggedOut }) => {
             Swol Gains Workout Generator
         </h1>
           {loggedOut
-            ? <h2>Peace out Mother Fucker</h2>
+            ? <h2>See you next week!</h2>
             : <h2>Welcome!</h2>
           }
           <div className={styles.loginBtnDiv}>
@@ -53,7 +53,7 @@ export const Login = ({ setIsLoggedIn, loggedOut, setLoggedOut }) => {
               onFailure={responseGoogle}
               cookiePolicy={'single_host_origin'}
             />
-            <NavLink to={constants.HOME_PATH} className={styles.guestLogin} onClick={handleGuestLogin}>Continue, as a guest</NavLink>
+            <NavLink to={constants.HOME_PATH} className={styles.guestLogin} onClick={handleGuestLogin}>Continue as guest</NavLink>
           </div>
         </div>
       </div>

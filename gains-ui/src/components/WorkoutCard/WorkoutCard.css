@@ -3,10 +3,9 @@
 }
 
 .list {
-  padding: 0.7rem;
   border-radius: 0.5rem;
   flex-basis: 25%;
-  text-align: left;
+  text-align: center;
   list-style-type: none;
   background-color: #D8D5DB;
   height: max-content;
