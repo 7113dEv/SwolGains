@@ -1,7 +1,23 @@
 .beans {
-  display: block
+  padding: .2rem;
 }
 
 .list {
-  display: block
+  padding: 0.7rem;
+  border-radius: 0.5rem;
+  flex-basis: 25%;
+  text-align: left;
+  list-style-type: none;
+  background-color: #D8D5DB;
+  height: max-content;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100vw;
+  height: 50vh;
 }

@@ -15,6 +15,14 @@ export const WorkoutGeneratorPage = () => {
 
     let day = 'seven_day';
     let unshuffled = constants[day];
+    setWorkoutList({
+      0: [],
+      1: [],
+      2: [],
+      3: [],
+      4: [],
+      5: []
+    })
 
     let shuffled = unshuffled
       .map((a) => ({ sort: Math.random(), value: a }))
@@ -38,6 +46,8 @@ export const WorkoutGeneratorPage = () => {
         }
       }
     }
+
+    console.log(workoutList);
   }
 
   return (
@@ -46,19 +56,7 @@ export const WorkoutGeneratorPage = () => {
         Generate Page
       </h1>
       <button onClick={generateWorkouts}>Generate</button>
-      <div>
-        {workoutList[5].length === 5 && Object.keys(workoutList).map((key) => {
-          <div>
-            <ul>
-              {workoutList[key].map((workout) => {
-                <li>
-                  {workout}
-                </li>
-              })}
-            </ul>
-          </div>
-        })}
-      </div>
+      <WorkoutCard />
     </div>
   )
 }
